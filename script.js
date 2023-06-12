@@ -1,9 +1,9 @@
 const userDataDiv = document.getElementById("user-data");
 
-fetch("https://2qdymf1olb.execute-api.us-east-1.amazonaws.com/Dev")
+fetch("https://randomuser.me/api/")
   .then((response) => response.json())
   .then((data) => {
-    const user = data.body.results[0];
+    const user = data.results[0];
     userDataDiv.innerHTML = `
     <img src="${user.picture.large}"
     <div>
